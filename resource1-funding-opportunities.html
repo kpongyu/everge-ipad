@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NHLBI Kiosk Pro App</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="content-header">
+            <div class="content-logo"><img alt="" class="logo-image" src="./image/nhlbi-logo.png"></div>
+
+        </header>
+
+        <div class="content resource-content">
+            <div class="breadcrumb">
+                <span style="padding-left:0 !important;">
+                    <a href="index.html">Home</a>
+                </span>/
+                <span>
+                    <a href="top-resources.html">Top Resources</a>
+                </span>/
+                <span>COVID-19 Funding Opportunities</span>
+            </div>
+            <div class="row">
+                <h1 class="content-heading">COVID-19 Funding Opportunities</h1>
+            </div>
+            <div class="row" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+                <!-- <div class="intro" style="width: 45% !important;"> -->
+                <div class="intro-full-width">
+                    <p>Given the major impact of underlying heart, lung, and blood diseases and conditions on morbidity
+                        and
+                        mortality among patients
+                        with Coronavirus Disease 2019 (COVID-19), NHLBI is pursuing a multi-pronged research strategy
+                        that
+                        leverages NHLBI-supported
+                        expertise, research, and infrastructure.</p>
+                </div>
+
+                <!-- </div>
+                    <div class="resource-img" style="width: 50% !important; position: relative;">
+                        <div class="resource-img-1">
+                            <img alt="" class="organic-image-1" height="auto" src="./image/r1-1.jpg" width="90%">
+                        </div>
+                    </div> -->
+            </div>
+
+            <div class="row para-button" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-up"
+                style=" max-width: 300px; float: left;">
+                <a class="CTA CTA-content external-link para-link external-link-left"
+                    href="https://www.nhlbi.nih.gov/coronavirus/nhlbi-covid-19-guidance-researchers">
+                    <img alt="" class="button-icon" height="auto" src="./image/link.png" width="15">
+                    COVID-19 Guidance for Researchers</a>
+            </div>
+
+
+
+        </div>
+
+        <footer>&nbsp;</footer>
+
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+
+                <div class="centralize">
+                    <div class="clock" id="clockAnimation">
+                        <div class="rotatePont rot1">
+                            <div class="pont1"></div>
+                        </div>
+                        <div class="rotatePont rot2">
+                            <div class="pont2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="model-title">Are you still viewing this page?</h2>
+                </div>
+                <div class="row" style="">
+                    <div class="card-container">
+                        <a class="CTA confirm-button" href="index.html">Back to Home</a>
+                    </div>
+                    <div class="card-container">
+                        <a class="CTA confirm-button stay-on-page" href="#">Stay on Page</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="jquery.idle.js" type="text/javascript"></script>
+<script>
+    $(document).idle({
+        onIdle: function () {
+            $(".modal").addClass("modal-display");
+        },
+        idle: 100000
+    });
+    $(document).idle({
+        onIdle: function () {
+            self.location = "index.html";
+        },
+        idle: 200000
+    });
+
+    $("#close").click(function () {
+        $(".modal").removeClass("modal-display");
+    });
+    $(".stay-on-page").click(function () {
+        $(".modal").removeClass("modal-display");
+    });
+
+</script>
+<script>AOS.init();</script>
+
+</html>
